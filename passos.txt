@@ -1,0 +1,15 @@
+git config --global user.email yasminfpreciato2019@gmail.com
+git config --global user.name yasminpreciato
+
+Criar um projeto angular
+ng new flix
+
+cd flix
+
+ng serve -o
+
+Criar um componente:
+ng g c pages/home
+
+Criar um serviço:
+ng g s services/movieApi
