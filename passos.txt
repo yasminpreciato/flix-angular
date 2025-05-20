@@ -6,6 +6,8 @@ ng new flix
 
 cd flix
 
+npm i
+
 ng serve -o
 
 Criar um componente:
