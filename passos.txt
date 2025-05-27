@@ -10,8 +10,16 @@ npm i
 
 ng serve -o
 
+/////////////////////
 Criar um componente:
 ng g c pages/home
 
+///////////////////////
+
 Criar um serviço:
 ng g s services/movieApi
+
+/////////////////////////////
+
+Criar uma diretiva
+ng g d directives/auto-acroll
