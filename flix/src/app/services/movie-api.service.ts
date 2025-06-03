@@ -19,22 +19,38 @@ export class MovieApiService {
   };
 
   // Dados para o banner - midias em destaques da semana
-  bannerApiData(): Observable<any>{
+  bannerApiData(): Observable<any> {
     return this.http.get(`${this.baseUrl}/trending/all/week?language=pt-br`, this.options);
   }
 
   // Filmes em destaque do Dia
-  trendingMovieApiData(): Observable<any>{
+  trendingMovieApiData(): Observable<any> {
     return this.http.get(`${this.baseUrl}/trending/movie/day?language=pt-br`, this.options);
   }
 
-   // Série em destaque do Dia
-   trendingSerieApiData(): Observable<any>{
+  // Série em destaque do Dia
+  trendingSerieApiData(): Observable<any> {
     return this.http.get(`${this.baseUrl}/trending/tv/day?language=pt-br`, this.options);
   }
 
-   // Filmes em ação Populares
-   popularActionMovieApiData(): Observable<any>{
+  // Filmes em ação Populares
+  popularActionMovieApiData(): Observable<any> {
     return this.http.get(`${this.baseUrl}/discover/movie?language=pt-br&with_genres=28&sort_by=popularity.desc`, this.options);
+  }
+
+  //.................... Ára de detalhes
+  //buscar detalhes da Midia
+  mediaDetails(type: any, value: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${type}/${value}?language=pt-br`, this.options);
+  }
+
+  //Buscar os trailers da Midia
+  mediaTrailers(type: any, value: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${type}/${value}/videos?language=pt-br`, this.options);
+  }
+
+  //Buscar os Elenco da Midia
+  mediaCast(type: any, value: any): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${type}/${value}/credits?language=pt-br`, this.options);
   }
 }
