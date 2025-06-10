@@ -1,4 +1,4 @@
-import { AutoAcrollDirective } from './auto-acroll.directive';
+import { AutoAcrollDirective } from './auto-scroll.directive';
 
 describe('AutoAcrollDirective', () => {
   it('should create an instance', () => {

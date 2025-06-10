@@ -32,6 +32,16 @@
         </div>
     </div>
 
+    <div class="container my-5">
+        <div class="row mb-5">
+            <h4 class="text-white">Filmes de Mistério em Destaque</h4>
+            <div class="rowposter mt-1" #trendingMysteryMovies autoScroll>
+                <a routerLink="/details/{{ m.media_type }}/{{ m.id }}" *ngFor="let m of trendingMysteryMovieResults">
+                    <img src="https://image.tmdb.org/t/p/w500/{{ m.poster_path }}" alt="Capa do Filme">
+                </a>
+            </div>
+        </div>
+
     <div class="row mb-5">
         <h4 class="text-white">Séries em Destaque</h4>
         <div class="rowposter mt-1" #trendingSeries autoScroll>
@@ -49,4 +59,14 @@
             </a>
         </div>
     </div>
+
+    <div class="container my-5">
+        <div class="row mb-5">
+            <h4 class="text-white">Filmes populares de Terror  </h4>
+            <div class="rowposter mt-1" #popularHorrorMovies autoScroll>
+                <a routerLink="/details/movie/{{ m.id }}" *ngFor="let m of popularHorrorMovieResults">
+                    <img src="https://image.tmdb.org/t/p/w500/{{ m.poster_path }}" alt="Capa do Filme">
+                </a>
+            </div>
+        </div>
 </div>
