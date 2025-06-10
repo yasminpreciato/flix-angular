@@ -19,6 +19,7 @@ export class HomeComponent {
   trendingSerieResults: any = []
   popularActionMovieResults: any = []
   popularHorrorMovieResults: any = []
+  popularMysteryMovieResults: any = []
   
 
   ngOnInit(): void {
@@ -27,6 +28,7 @@ export class HomeComponent {
     this.trendingSerieData();
     this.popularActionMovieData();
     this.popularHorrorMovieData();
+    this.popularMysteryMovieData();
   }
 
   // Banner
@@ -54,6 +56,12 @@ export class HomeComponent {
   popularHorrorMovieData() {
     this.service.popularHorrorMovieApiData().subscribe((result) => {
       this.popularHorrorMovieResults = result.results;
+    })
+  }
+
+  popularMysteryMovieData() {
+    this.service.popularMysteryMovieApiData().subscribe((result) => {
+      this.popularMysteryMovieResults = result.results;
     })
   }
 
