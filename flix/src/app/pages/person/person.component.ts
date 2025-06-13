@@ -10,6 +10,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './person.component.css'
 })
 export class PersonComponent {
+
+
+  
  
 }
 

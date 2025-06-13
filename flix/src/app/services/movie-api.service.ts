@@ -33,12 +33,12 @@ export class MovieApiService {
     return this.http.get(`${this.baseUrl}/trending/tv/day?language=pt-br`, this.options);
   }
 
-   // Filme de terror em destaque do Dia
+   // Filme de terror populares
    popularHorrorMovieApiData(): Observable<any> {
     return this.http.get(`${this.baseUrl}/discover/movie?language=pt-br&with_genres=27&sort_by=popularity.desc`, this.options);
   }
 
-   // Filme de terror em destaque do Dia
+   // Filme de Mistério populares
    popularMysteryMovieApiData(): Observable<any> {
     return this.http.get(`${this.baseUrl}/discover/movie?language=pt-br&with_genres=9648&sort_by=popularity.desc`, this.options);
   }
