@@ -10,6 +10,11 @@ npm i
 
 ng serve -o
 
+
+/////////////////////
+Criar um componente:
+ng g c pages/person
+
 /////////////////////
 Criar um componente:
 ng g c pages/home

@@ -52,5 +52,4 @@ export class DetailsComponent {
       'https://www.youtube.com/embed/' + key
     )
   }
-
 }
